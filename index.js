@@ -12,21 +12,23 @@ fs.readFile("home.html", (err, home) => {
     }
     homeContent = home;
 });
+
 fs.readFile("project.html", (err, project) => {
     if (err) {
         throw err;
     }
     projectContent = project;
 });
+
 fs.readFile("registration.html", (err, registration) => {
     if (err) {
         throw err;
     }
     registrationContent = registration;
 });
+
 http.createServer((request, response) => {
     let url = request.url;
-    // let port = request.port;
     response.writeHeader(200, { "Content-Type": "text/html" });
     switch (url) {
         case "/project":
