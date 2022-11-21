@@ -99,7 +99,7 @@
             return entries;
         }
 
-        let userEntries = retrieveEntries();
+          let userEntries = retrieveEntries();
         const displayEntries = () => {
             const entries = retrieveEntries();
             const tableEntries = entries.map((entry) => {
@@ -144,13 +144,13 @@
             displayEntries();
         }
         function validate(element) {
-            var curr_date = new Date().getFullYear();
+             var curr_date = new Date().getFullYear();
             var date = element.getFullYear();
             var age = curr_date - date;
             if (age < 18 || age > 55) {
                 element.setCustomValidity("age should be 18!");
                 element.reportValidity();
-            }
+            } 
             else
                 element.setCustomValidity('');
         }
